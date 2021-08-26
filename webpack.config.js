@@ -24,12 +24,18 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'lib'),
     filename: 'index.js',
-    /**
-     * An object with { root, amd, commonjs, ... } is only allowed for libraryTarget: 'umd'.
-     * It's not allowed for other library targets.
-     * https://webpack.js.org/configuration/externals/#object
-     */
     library: {
+      name: {
+        root: 'FormikTokenInput',
+        commonjs: 'formik-token-input',
+        amd: 'formik-token-input',
+      },
+      /**
+       * Fix issue `Minified React error #321`
+       * An object with { root, amd, commonjs, ... } is only allowed for libraryTarget: 'umd'.
+       * It's not allowed for other library targets.
+       * https://webpack.js.org/configuration/externals/#object
+       */
       type: 'umd',
     },
   },
