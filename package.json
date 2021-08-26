@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react-customize-token-input": "^1.4.1"
+    "react-customize-token-input": "^1.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

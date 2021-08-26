@@ -6300,10 +6300,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-customize-token-input@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-1.4.1.tgz#15915a96deb2a689d39a9357f5f703c8c14510d7"
-  integrity sha512-qh/ZnbOIN+swrunVXpBP1TgmPkDbOGl+2DB8WUHgCYF+tPSwCBs7mUfz915GxRtBua2I0dbhc5k2Yifbn/Q5pg==
+react-customize-token-input@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-1.4.2.tgz#bf19bf79117d2d13fd515a6ddb37a29fa3e9fbc6"
+  integrity sha512-HddYpG9OK+XJt37lGZ52R9NFK3m4CY3s9EFZorRLkm0/ouen1Yjb9KZIUgHWtk2n2chjQtWAC4EdPkFfNtbM4A==
   dependencies:
     classnames "^2.3.1"
     prop-types "^15.7.2"
