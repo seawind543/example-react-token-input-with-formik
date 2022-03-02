@@ -5,7 +5,6 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const nib = require('nib');
 const pkg = require('./package.json');
 
 const publicName = pkg.name; // package name
@@ -64,38 +63,6 @@ module.exports = {
         },
       },
       {
-        test: /\.styl$/,
-        // extract-text-webpack-plugin not support
-        // Apply mini-css-extract-plugin instead
-        // https://bbs.huaweicloud.com/blogs/detail/241981
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: 'css-loader', // translates CSS into CommonJS
-            options: {
-              sourceMap: false,
-              importLoaders: 1,
-              modules: {
-                localIdentName: `${localClassPrefix}-[local]`,
-              },
-            },
-          },
-          {
-            loader: 'stylus-loader', // compiles Stylus to CSS
-            options: {
-              stylusOptions: {
-                use: [nib()],
-                import: ['nib'],
-                compress: false, // Avoid minify
-                sourceMap: false,
-              },
-            },
-          },
-        ],
-      },
-      {
         test: /\.s[ac]ss$/i,
         // extract-text-webpack-plugin not support
         // Apply mini-css-extract-plugin instead
@@ -151,14 +118,7 @@ module.exports = {
     }),
     new StylelintPlugin({
       configFile: './stylelint.config.js',
-      files: ['*.styl'],
-    }),
-    new MiniCssExtractPlugin({
-      filename: `../dist/${publicName}.css`,
-    }),
-    new MiniCssExtractPlugin({
-      // For build not minimize version
-      filename: `../dist/${publicName}.original.css`,
+      files: ['*.scss'],
     }),
     new webpack.BannerPlugin(banner),
   ],
