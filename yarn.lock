@@ -7145,7 +7145,7 @@ prompts@2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.5.8, prop-types@^15.7.2:
+prop-types@^15.5.8:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -7251,13 +7251,13 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-customize-token-input@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-1.4.2.tgz#bf19bf79117d2d13fd515a6ddb37a29fa3e9fbc6"
-  integrity sha512-HddYpG9OK+XJt37lGZ52R9NFK3m4CY3s9EFZorRLkm0/ouen1Yjb9KZIUgHWtk2n2chjQtWAC4EdPkFfNtbM4A==
+react-customize-token-input@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-1.7.0.tgz#78bab9a53819dc1f5d2c1cdaac7a009cba7bc713"
+  integrity sha512-E/HJS3BCcENPWwaWTD8nhZ59WIDEjDWSJ3oHvnwJFJylwQ0ndG/NUVtuMnac3ePfulKIAI1tYC0Z8Om+dqXpjg==
   dependencies:
     classnames "^2.3.1"
-    prop-types "^15.7.2"
+    prop-types "^15.8.1"
     react-input-autosize "^3.0.0"
 
 react-dev-utils@^11.0.4:

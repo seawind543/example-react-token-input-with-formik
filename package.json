@@ -46,7 +46,7 @@
     "formik": "^2.2.9",
     "prop-types": "^15.8.1",
     "react": "^16.10.2",
-    "react-customize-token-input": "^1.4.2",
+    "react-customize-token-input": "^1.7.0",
     "react-dev-utils": "^11.0.4",
     "react-dom": "^16.14.0"
   },
