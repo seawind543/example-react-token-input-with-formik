@@ -58,7 +58,7 @@ module.exports = {
       // Process JS with Babel
       {
         test: /\.(js|jsx)?$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|lib)/,
         use: {
           loader: 'babel-loader',
         },
@@ -127,7 +127,9 @@ module.exports = {
     }),
     new StylelintPlugin({
       configFile: './stylelint.config.js',
-      files: ['*.scss'],
+      files: ['**/*.scss'],
+      customSyntax: 'postcss-scss',
+      exclude: ['node_modules', 'docs', 'dist', 'lib'],
     }),
     new webpack.BannerPlugin(banner),
   ],
