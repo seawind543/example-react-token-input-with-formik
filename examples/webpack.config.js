@@ -14,7 +14,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'index.jsx'),
   output: {
     path: path.join(__dirname, '../docs'),
-    filename: 'bundle.js?[hash]',
+    filename: 'bundle.js?[fullhash]',
   },
   optimization: {
     moduleIds: 'named',
