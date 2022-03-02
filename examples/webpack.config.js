@@ -67,6 +67,33 @@ module.exports = {
         ],
       },
       {
+        test: /\.s[ac]ss$/i,
+        // extract-text-webpack-plugin not support
+        // Apply mini-css-extract-plugin instead
+        // https://bbs.huaweicloud.com/blogs/detail/241981
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          // This plugin should not be used with style-loader in the loaders chain.
+          // https://webpack.js.org/plugins/mini-css-extract-plugin/#advanced-configuration-example
+          // {
+          //   loader: MiniCssExtractPlugin.loader,
+          // },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+            options: {
+              modules: {
+                localIdentName: `${localClassPrefix}-[local]`,
+              },
+            },
+          },
+          {
+            loader: 'sass-loader', // compiles SASS to CSS
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {

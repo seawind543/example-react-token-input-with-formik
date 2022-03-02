@@ -96,6 +96,34 @@ module.exports = {
         ],
       },
       {
+        test: /\.s[ac]ss$/i,
+        // extract-text-webpack-plugin not support
+        // Apply mini-css-extract-plugin instead
+        // https://bbs.huaweicloud.com/blogs/detail/241981
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+            options: {
+              modules: {
+                localIdentName: `${localClassPrefix}-[local]`,
+              },
+            },
+          },
+          {
+            loader: 'sass-loader', // compiles SASS to CSS
+            options: {
+              sassOptions: {
+                outputStyle: 'expanded',
+              },
+              sourceMap: false,
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {
