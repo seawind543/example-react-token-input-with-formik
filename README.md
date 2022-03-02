@@ -7,7 +7,7 @@ Live Demo: https://seawind543.github.io/example-react-token-input-with-formik/
 ## Dev
 
 1. Run `yarn install` to install required packages.
-2. Run `yarn dev` to launch `webpack-dev-server`.
+2. Run `yarn start` to launch `webpack-dev-server`.
 3. After step 2, you will see following message output in command console.
 
 ```
