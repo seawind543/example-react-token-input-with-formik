@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import classNames from 'classnames';
 
-import styles from './Section.styl';
+import styles from './Section.scss';
 
 const Section = (props) => (
   <div className={classNames(props.className, styles.section)}>

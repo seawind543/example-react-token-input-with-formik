@@ -12,7 +12,7 @@ import Section from './Section';
 
 import ExampleDefault from './ExampleDefault';
 
-import './index.styl';
+import './index.scss';
 
 const name = 'React TokenInput (react-customize-token-input)';
 const url =

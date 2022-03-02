@@ -8,11 +8,13 @@
     "lib"
   ],
   "scripts": {
-    "prepublish": "yarn run eslint && yarn run clean && yarn run build && yarn run build:examples",
+    "prepublish": "yarn run lint && yarn run clean && yarn run build && yarn run build:examples",
     "build": "webpack",
     "build:examples": "cd examples; webpack",
     "clean": "rm -f {lib,dist}/*",
-    "eslint": "eslint --max-warnings 0 --ext .jsx,.js,.ts,.tsx examples src test",
+    "lint": "yarn run lint:eslint && yarn run lint:style",
+    "lint:eslint": "eslint --max-warnings 0 --ext .jsx,.js,.tsx,.ts examples src",
+    "lint:style": "stylelint --custom-syntax postcss-scss '**/*.scss'",
     "start": "cd examples; webpack && webpack serve --hot --inline --host 0.0.0.0 --port 8000 --content-base ../docs"
   },
   "husky": {
@@ -43,8 +45,8 @@
   "dependencies": {
     "formik": "^2.2.9",
     "prop-types": "^15.8.1",
-    "react-customize-token-input": "^1.4.2",
     "react": "^16.10.2",
+    "react-customize-token-input": "^1.4.2",
     "react-dev-utils": "^11.0.4",
     "react-dom": "^16.14.0"
   },
@@ -74,17 +76,23 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
     "mini-css-extract-plugin": "^2.5.3",
-    "nib": "^1.1.2",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.7",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.2",
     "prettier": "^2.5.1",
+    "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.5.3",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
     "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.1.0",
+    "stylelint-selector-bem-pattern": "^2.1.1",
     "stylelint-webpack-plugin": "^3.1.1",
-    "stylus": "^0.56.0",
-    "stylus-loader": "^6.2.0",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^3.11.3"

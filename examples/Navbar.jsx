@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import classNames from 'classnames';
 
-import styles from './Navbar.styl';
+import styles from './Navbar.scss';
 
 const Navbar = ({ url, name }) => {
   return (
