@@ -6,7 +6,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 
-const localClassPrefix = 'token-input';
+const localClassPrefix = 'formik-token-input';
 
 module.exports = {
   mode: 'development',
@@ -23,13 +23,15 @@ module.exports = {
   },
   module: {
     rules: [
-      // Process JS with Babel
+      // Process J/TS with Babel
       {
-        test: /\.(js|jsx)?$/,
+        test: /\.[jt]s(x?)$/,
         exclude: /(node_modules|lib)/,
-        use: {
-          loader: 'babel-loader',
-        },
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -99,7 +101,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   // https://webpack.github.io/docs/webpack-dev-server.html#additional-configuration-options
   devServer: {
