@@ -20,7 +20,7 @@ const localClassPrefix = 'formik-token-input';
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
     path: path.join(__dirname, 'lib'),
     filename: 'index.js',
@@ -125,7 +125,7 @@ module.exports = {
     new ESLintPlugin({
       formatter: eslintFormatter,
       eslintPath: require.resolve('eslint'),
-      exclude: ['node_modules', 'docs', 'dist', 'lib'],
+      exclude: ['node_modules', 'docs', 'lib'],
       emitWarning: true,
       cache: false,
     }),
@@ -133,7 +133,7 @@ module.exports = {
       configFile: './stylelint.config.js',
       files: ['**/*.scss'],
       customSyntax: 'postcss-scss',
-      exclude: ['node_modules', 'docs', 'dist', 'lib'],
+      exclude: ['node_modules', 'docs', 'lib'],
     }),
     new webpack.BannerPlugin(banner),
   ],
