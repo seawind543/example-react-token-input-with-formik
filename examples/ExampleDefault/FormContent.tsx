@@ -3,9 +3,10 @@
 import React from 'react';
 import { useFormikContext } from 'formik';
 
+// eslint-disable-next-line import/extensions
 import FormikTokenInput from '../../src';
 
-const handlePreprocess = (inputValues) => {
+const handlePreprocess = (inputValues: string[]) => {
   // Remove blanks from input strings' header and tail
   return inputValues.map((inputValue) => inputValue.trim());
 };

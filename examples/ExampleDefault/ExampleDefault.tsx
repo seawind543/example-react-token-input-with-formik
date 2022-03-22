@@ -1,7 +1,7 @@
 /* eslint no-console: 0 */
 
 import React, { useCallback } from 'react';
-import { Formik } from 'formik';
+import { Formik, type FormikErrors } from 'formik';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import emailValidator from 'email-validator';
@@ -10,19 +10,24 @@ import FormContent from './FormContent';
 
 import CopyAnchor from '../share/CopyAnchor';
 
-const INIT_VALUES = {
+type Email = string;
+type FormikValues = {
+  emails: Email[];
+};
+
+const INIT_VALUES: FormikValues = {
   emails: ['test@email.com', 'test2@example.com', 'notEmail'],
 };
 
 /**
  * Formik validation
  */
-const handleValidate = (values) => {
-  const errors = {};
+const handleValidate = (values: FormikValues): FormikErrors<FormikValues> => {
+  const errors: FormikErrors<FormikValues> = {};
 
   /* validate emails format */
   let hasInvalid = false;
-  const emailsError = [];
+  const emailsError: FormikErrors<FormikValues>['emails'] = [];
   const { emails } = values;
 
   emails.forEach((email, index) => {
@@ -40,10 +45,13 @@ const handleValidate = (values) => {
 };
 
 const ExampleDefault = () => {
-  const handleFormSubmit = useCallback((values) => {
-    console.log('handleFormSubmit values', values);
-    return false;
-  }, []);
+  const handleFormSubmit = useCallback(
+    (values: FormikValues, { setSubmitting }) => {
+      console.log('handleFormSubmit values', values);
+      setSubmitting(false);
+    },
+    []
+  );
 
   return (
     <>
