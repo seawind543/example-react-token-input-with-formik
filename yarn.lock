@@ -5822,10 +5822,10 @@ jsx-ast-utils@^3.2.1:
     array-includes "^3.1.3"
     object.assign "^4.1.2"
 
-keydown-key@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/keydown-key/-/keydown-key-1.2.0.tgz#8a7e9ebb9f44c9cc8eafd12ea79642797a8d9c1c"
-  integrity sha512-zErHmXoRdiqdFIdexfrO4liTcXRP5epTdJMuQQxfO8wiVNp8rDPfxWXY2NVHOA++kIUr3IyjPA5bnHS/7vq85A==
+keydown-key@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/keydown-key/-/keydown-key-1.2.1.tgz#b1d8da3fb8fa003574174518501e4fdc108dceee"
+  integrity sha512-kUjUxteiMH4rtBHGLY5+NipqZXmGg0KqYJazefX+iSSUYXl1v5PVEl0nG92p1WWCqE1EtGUq8tAd1xoYPMkWNQ==
 
 killable@^1.0.1:
   version "1.0.1"
@@ -7847,14 +7847,13 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-customize-token-input@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.0.0.tgz#57e0d173a4b183ceca196ee3fb7f56933e0e7623"
-  integrity sha512-8mlGTBFjevSIA468sk0H0v7kTQR3xPrCzJv5lI1aa8xbyiCZub8PURoNs6AFLxjVveFA3Mv2LgiROiNVaoZTCA==
+react-customize-token-input@2.2.0-beta.0:
+  version "2.2.0-beta.0"
+  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.2.0-beta.0.tgz#f73a2ca18f618978f00e5b055fd68ec4d4e5dc9a"
+  integrity sha512-d4Zr/y9g+bH2eoD8C94BkR9LmODYQ6Go8aa6uG/HaQH8zFrUH/hJLW8IZ9Ly+xM6RAHyouoV1Ezd+qILuk5mqQ==
   dependencies:
     classnames "^2.3.1"
-    keydown-key "^1.1.1"
-    prop-types "^15.8.1"
+    keydown-key "^1.2.1"
     react-input-autosize "^3.0.0"
 
 react-dev-utils@^12.0.0:
