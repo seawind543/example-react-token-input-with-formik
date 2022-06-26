@@ -34,17 +34,32 @@ type RestTokenInputProps<ValueType> = Omit<
   | 'onTokenValueValidate'
 >;
 
+// By type Intersection
+// /**
+//  * @template ValueType
+//  * @typedef {Object} FormikTokenInputProps
+//  */
+// type FormikTokenInputProps<ValueType> = {
+//   /**
+//    * @prop {string} name
+//    * @description - Field name of formik
+//    */
+//   name: string;
+// } & RestTokenInputProps<ValueType>;
+
+// By interface Extends
 /**
  * @template ValueType
  * @typedef {Object} FormikTokenInputProps
  */
-type FormikTokenInputProps<ValueType> = {
+interface FormikTokenInputProps<ValueType>
+  extends RestTokenInputProps<ValueType> {
   /**
    * @prop {string} name
    * @description - Field name of formik
    */
   name: string;
-} & RestTokenInputProps<ValueType>;
+}
 
 function FormikTokenInput(props: FormikTokenInputProps<FormikTokenValue>) {
   const { name: filedName, ...restProps } = props;
