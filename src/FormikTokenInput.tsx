@@ -24,7 +24,7 @@ const handleTokenValueValidate = (
 };
 
 // Exclude the props that will be handled by FormikTokenInput
-type RestTokenInputProps<ValueType> = Omit<
+type RestOfTokenInputProps<ValueType> = Omit<
   TokenInputProps<ValueType, string>,
   | 'tokenValues'
   | 'onTokenValuesChange'
@@ -34,26 +34,21 @@ type RestTokenInputProps<ValueType> = Omit<
   | 'onTokenValueValidate'
 >;
 
-// By type Intersection
-// /**
-//  * @template ValueType
-//  * @typedef {Object} FormikTokenInputProps
-//  */
+/**
+ * @template ValueType
+ * @typedef {Object} FormikTokenInputProps
+ */
+// Method 1: By type Intersection
 // type FormikTokenInputProps<ValueType> = {
 //   /**
 //    * @prop {string} name
 //    * @description - Field name of formik
 //    */
 //   name: string;
-// } & RestTokenInputProps<ValueType>;
-
-// By interface Extends
-/**
- * @template ValueType
- * @typedef {Object} FormikTokenInputProps
- */
+// } & RestOfTokenInputProps<ValueType>;
+// Method 2: By interface Extends
 interface FormikTokenInputProps<ValueType>
-  extends RestTokenInputProps<ValueType> {
+  extends RestOfTokenInputProps<ValueType> {
   /**
    * @prop {string} name
    * @description - Field name of formik
@@ -67,12 +62,12 @@ function FormikTokenInput(props: FormikTokenInputProps<FormikTokenValue>) {
   const { tokenValues, handleTokenValuesChange } = useTokenValues(filedName);
 
   return (
-    <TokenInput<FormikTokenValue, string>
+    <TokenInput
       /**
        * Append additional settings for TokenInput,
        * such as `className`
        */
-      {...(restProps as RestTokenInputProps<FormikTokenValue>)}
+      {...(restProps as RestOfTokenInputProps<FormikTokenValue>)}
       tokenValues={tokenValues}
       onTokenValuesChange={handleTokenValuesChange}
       onBuildTokenValue={handleBuildTokenValue}
