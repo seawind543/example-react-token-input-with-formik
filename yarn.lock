@@ -7847,10 +7847,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-customize-token-input@2.2.0-beta.0:
-  version "2.2.0-beta.0"
-  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.2.0-beta.0.tgz#f73a2ca18f618978f00e5b055fd68ec4d4e5dc9a"
-  integrity sha512-d4Zr/y9g+bH2eoD8C94BkR9LmODYQ6Go8aa6uG/HaQH8zFrUH/hJLW8IZ9Ly+xM6RAHyouoV1Ezd+qILuk5mqQ==
+react-customize-token-input@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.2.0.tgz#470fa91ad0a8ac516257d94f9c2797483de85809"
+  integrity sha512-WBSSEG+PKkPRWX7YwFDUi9StxupN9ciLq/k4EYqHiq6UQxkF5QYQTv9BwXIc0Rtt7z2uigJ+YLwEtw2xEvaJCw==
   dependencies:
     classnames "^2.3.1"
     keydown-key "^1.2.1"
