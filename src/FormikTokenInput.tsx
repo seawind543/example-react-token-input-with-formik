@@ -17,28 +17,48 @@ const handleGetTokenDisplayLabel = (formikTokenValue: FormikTokenValue) => {
   return getTokenEditableValue(formikTokenValue);
 };
 
-const handleTokenValueValidate = (formikTokenValue: FormikTokenValue) => {
+const handleTokenValueValidate = (
+  formikTokenValue: FormikTokenValue
+): string | null | undefined => {
   return formikTokenValue.fieldError; // The error from formik
 };
 
-// type TokenInputProps<ValueType, ErrorType> = JSX.LibraryManagedAttributes<
-//   typeof TokenInput,
-//   React.ComponentProps<typeof TokenInput>
-// >;
-// type Test = TokenInputProps<string, string>['onGetTokenDisplayLabel'];
+// Exclude the props that will be handled by FormikTokenInput
+type RestOfTokenInputProps<ValueType> = Omit<
+  TokenInputProps<ValueType, string>,
+  | 'tokenValues'
+  | 'onTokenValuesChange'
+  | 'onBuildTokenValue'
+  | 'onGetTokenDisplayLabel'
+  | 'onGetTokenEditableValue'
+  | 'onTokenValueValidate'
+>;
 
-// type Props<ValueType> = {
+/**
+ * @template ValueType
+ * @typedef {Object} FormikTokenInputProps
+ */
+// Method 1: By type Intersection
+// type FormikTokenInputProps<ValueType> = {
+//   /**
+//    * @prop {string} name
+//    * @description - Field name of formik
+//    */
 //   name: string;
-// } & Partial<TokenInputProps<ValueType, string>>;
-type Props<ValueType> = {
+// } & RestOfTokenInputProps<ValueType>;
+// Method 2: By interface Extends
+interface FormikTokenInputProps<ValueType>
+  extends RestOfTokenInputProps<ValueType> {
+  /**
+   * @prop {string} name
+   * @description - Field name of formik
+   */
   name: string;
-  onPreprocess?: TokenInputProps<ValueType, string>['onPreprocess'];
-};
+}
 
-function FormikTokenInput<ValueType>({
-  name: filedName,
-  ...props
-}: Props<ValueType>) {
+function FormikTokenInput(props: FormikTokenInputProps<FormikTokenValue>) {
+  const { name: filedName, ...restProps } = props;
+
   const { tokenValues, handleTokenValuesChange } = useTokenValues(filedName);
 
   return (
@@ -47,7 +67,7 @@ function FormikTokenInput<ValueType>({
        * Append additional settings for TokenInput,
        * such as `className`
        */
-      {...props}
+      {...(restProps as RestOfTokenInputProps<FormikTokenValue>)}
       tokenValues={tokenValues}
       onTokenValuesChange={handleTokenValuesChange}
       onBuildTokenValue={handleBuildTokenValue}
