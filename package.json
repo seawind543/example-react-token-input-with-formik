@@ -63,7 +63,6 @@
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "babel-loader": "^9.1.0",
-    "babel-plugin-transform-react-qa-classes": "^1.6.0",
     "css-loader": "^6.7.2",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "email-validator": "^2.0.4",
