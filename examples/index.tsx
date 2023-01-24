@@ -1,13 +1,7 @@
 /* eslint @typescript-eslint/no-shadow: 0 */
 
 import React, { useState, useEffect } from 'react';
-
-/**
- * Disable the ESLint `import/no-extraneous-dependencies` for import ReactDOM
- * ReactDOM is only use for build the `live demo page` and `dev`,
- * so keep it in devDependencies
- */
-import ReactDOM from 'react-dom'; // eslint-disable-line import/no-extraneous-dependencies
+import { createRoot } from 'react-dom/client';
 
 import Navbar from './Navbar';
 import Section from './Section';
@@ -78,4 +72,6 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('container'));
+const container = document.getElementById('container');
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+root.render(<App />);
