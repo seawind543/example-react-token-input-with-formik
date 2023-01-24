@@ -2,8 +2,6 @@
 
 import React from 'react';
 import { useFormikContext } from 'formik';
-
-// eslint-disable-next-line import/extensions
 import FormikTokenInput from '../../src';
 
 const handlePreprocess = (inputValues: string[]) => {
