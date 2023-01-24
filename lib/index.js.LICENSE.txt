@@ -1,4 +1,4 @@
-/*! example-react-token-input-with-formik v2.2.0 | (c) 2023 Mark Lin. | MIT | https://github.com/seawind543/example-react-token-input-with-formik */
+/*! example-react-token-input-with-formik v2.5.1 | (c) 2023 Mark Lin. | MIT | https://github.com/seawind543/example-react-token-input-with-formik */
 
 /** @license React v16.13.1
  * react-is.production.min.js
