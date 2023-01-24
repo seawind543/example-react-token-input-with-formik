@@ -1,7 +1,7 @@
 /* eslint no-console: 0 */
 
 import React, { useCallback } from 'react';
-import { Formik, type FormikErrors } from 'formik';
+import { Formik, type FormikErrors, type FormikHelpers } from 'formik';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import emailValidator from 'email-validator';
@@ -46,9 +46,9 @@ const handleValidate = (values: FormikValues): FormikErrors<FormikValues> => {
 
 const ExampleDefault = () => {
   const handleFormSubmit = useCallback(
-    (values: FormikValues, { setSubmitting }) => {
+    (values: FormikValues, actions: FormikHelpers<FormikValues>) => {
       console.log('handleFormSubmit values', values);
-      setSubmitting(false);
+      actions.setSubmitting(false);
     },
     []
   );
