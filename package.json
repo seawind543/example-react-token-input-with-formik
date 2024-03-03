@@ -103,5 +103,8 @@
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.2"
+  },
+  "engines": {
+    "node": ">=v18.19.0"
   }
 }
