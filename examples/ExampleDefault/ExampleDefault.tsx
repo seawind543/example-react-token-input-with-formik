@@ -50,7 +50,7 @@ const ExampleDefault = () => {
       console.log('handleFormSubmit values', values);
       actions.setSubmitting(false);
     },
-    []
+    [],
   );
 
   return (

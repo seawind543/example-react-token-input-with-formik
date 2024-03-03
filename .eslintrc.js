@@ -62,7 +62,6 @@ module.exports = {
     {
       files: ['**/*.{ts,tsx}'],
       extends: [
-        'airbnb-base',
         'airbnb-typescript',
         'plugin:prettier/recommended',
         'plugin:@typescript-eslint/recommended',

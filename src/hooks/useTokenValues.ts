@@ -7,7 +7,9 @@ import type { FormikTokenValue } from '../types/token';
 
 const normolizeFormikTokenValues = (
   fieldValues: FormikTokenValue['fieldValue'][],
-  fieldErrors: FormikTokenValue['fieldError'] | FormikTokenValue['fieldError'][]
+  fieldErrors:
+    | FormikTokenValue['fieldError']
+    | FormikTokenValue['fieldError'][],
 ): FormikTokenValue[] => {
   const tokenValues = fieldValues.map((fieldValue, index) => {
     const fieldError = Array.isArray(fieldErrors)
@@ -31,7 +33,7 @@ const useTokenValues = (filedName: string) => {
   const { value: fieldValues, error: fieldErrors = EMPTY_FIELD_ERRORS } = meta;
 
   const [tokenValues, setTokenValues] = useState<FormikTokenValue[]>(() =>
-    normolizeFormikTokenValues(fieldValues, fieldErrors)
+    normolizeFormikTokenValues(fieldValues, fieldErrors),
   );
 
   useEffect(() => {
@@ -46,7 +48,7 @@ const useTokenValues = (filedName: string) => {
       setTouched(true, false);
       setValue(newFieldValues);
     },
-    [helpers]
+    [helpers],
   );
 
   return {

@@ -1,6 +1,6 @@
 export type Styles = {
   hashTag: string;
-  'material-icons': string;
+  "material-icons": string;
 };
 
 export type ClassNames = keyof Styles;
