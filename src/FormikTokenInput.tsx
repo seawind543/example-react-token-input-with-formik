@@ -18,7 +18,7 @@ const handleGetTokenDisplayLabel = (formikTokenValue: FormikTokenValue) => {
 };
 
 const handleTokenValueValidate = (
-  formikTokenValue: FormikTokenValue
+  formikTokenValue: FormikTokenValue,
 ): string | null | undefined => {
   return formikTokenValue.fieldError; // The error from formik
 };
