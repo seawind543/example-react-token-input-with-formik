@@ -13,20 +13,23 @@
     "build:scss-types": "typed-scss-modules '{src,examples}/**/*.scss' --nameFormat none --exportType default",
     "build:webpack": "webpack",
     "build:examples": "cd examples; webpack",
-    "lint": "yarn run lint:style && yarn run lint:eslint",
+    "lint": "yarn run lint:style && yarn run lint:eslint && yarn run lint:typescript",
     "lint:eslint": "eslint --max-warnings 0 --ext .jsx,.js,.tsx,.ts src examples",
     "lint:style": "stylelint --custom-syntax postcss-scss '**/*.scss' --fix",
+    "lint:typescript": "tsc --noEmit true",
     "start": "cd examples; webpack && webpack serve"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
+    "{src,examples}/**/*.{ts,tsx}": [
+      "tsc --noEmit true"
+    ],
+    "{src,examples}/**/*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --fix --max-warnings 0"
+    ],
+    "{src,examples}/**/*.scss": [
+      "prettier --write",
+      "stylelint --fix --custom-syntax postcss-scss"
     ]
   },
   "repository": {
@@ -77,8 +80,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-webpack-plugin": "^4.0.1",
     "html-webpack-plugin": "^5.6.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "mini-css-extract-plugin": "^2.8.1",
     "node-sass": "^9.0.0",
     "postcss": "^8.4.35",
