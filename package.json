@@ -8,8 +8,7 @@
   ],
   "scripts": {
     "prepublish": "yarn run lint && yarn run build",
-    "build": "yarn run build:clean && yarn run build:scss-types && yarn run build:webpack && yarn run build:examples",
-    "build:clean": "rm -rf lib/*",
+    "build": "yarn run build:scss-types && yarn run build:webpack && yarn run build:examples",
     "build:scss-types": "typed-scss-modules '{src,examples}/**/*.scss' --nameFormat none --exportType default",
     "build:webpack": "webpack",
     "build:examples": "cd examples; webpack",
