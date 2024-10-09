@@ -97,7 +97,7 @@
     "stylelint-prettier": "^5.0.2",
     "stylelint-selector-bem-pattern": "^4.0.1",
     "stylelint-webpack-plugin": "^5.0.1",
-    "typed-scss-modules": "^8.0.0",
+    "typed-scss-modules": "^8.0.1",
     "typescript": "^5.6.3",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",

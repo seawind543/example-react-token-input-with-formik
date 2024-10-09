@@ -8504,10 +8504,10 @@ typed-array-length@^1.0.5:
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
 
-typed-scss-modules@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/typed-scss-modules/-/typed-scss-modules-8.0.0.tgz#357ca724a16716a1562c04a71c2d95dc7d9b331d"
-  integrity sha512-wOVwQbAJBe9C1wcMhsy4NufYbegd35cKtA1Tn/DOyUK0BOInk4xg2fUN/3GzBe13+CdxwsAB8NQJKWqd7R2yaA==
+typed-scss-modules@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/typed-scss-modules/-/typed-scss-modules-8.0.1.tgz#6ff28393d0a57d283dbbf84ba0ebd47f704f0571"
+  integrity sha512-sH+Bh179X3aTsorQXIihgw5zXtyaq86BlDIOM66DQvYv0B31oVb3Zbii8l6JdrEUbvTZjsOsOgOT4EyCKmfFNg==
   dependencies:
     bundle-require "^3.0.4"
     chalk "4.1.2"
