@@ -15,6 +15,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../docs'),
     filename: 'bundle.js?[fullhash]',
+    clean: true, // Clean the output directory before emit.
   },
   optimization: {
     moduleIds: 'named',
