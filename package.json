@@ -1,6 +1,6 @@
 {
   "name": "example-react-token-input-with-formik",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "description": "An Example about use React TokenInput (react-customize-token-input) with Formik",
   "main": "lib/index.js",
   "files": [
