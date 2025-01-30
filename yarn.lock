@@ -5407,9 +5407,9 @@ jsonfile@^6.0.1:
     object.values "^1.1.6"
 
 keydown-key@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/keydown-key/-/keydown-key-1.4.2.tgz#aacffbf4e7942478cb0cfb1ded4928869d9eb571"
-  integrity sha512-08XCpf42KTiqI0oVY92UwXjn/SJiN0wZX8Fca0v6fRlOSpUijH5ynR/r6XOAEHpsD1o6+l7h6T6R2elLyyET3g==
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/keydown-key/-/keydown-key-1.4.3.tgz#56449b0f1fa74614f7ff8e125ef57872085bb549"
+  integrity sha512-vSsj5EQqcT66qIAzTv/imLYeMT6orTah+ZbG1MYc5YHBU3YSFvEzt9MVbEd1ePVRhV6qlr6dDPP1d3xpHi2TkQ==
 
 keyv@^4.5.3:
   version "4.5.4"
@@ -7175,9 +7175,9 @@ raw-body@2.5.2:
     unpipe "1.0.0"
 
 react-customize-token-input@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.6.1.tgz#299a25412e720e1d074d36f3c06742977b4484cc"
-  integrity sha512-mYVoJE59v/V/Mu+TGqz6WSD5KJ926HN6xD87rNA4tgm8KTxrdwiI2/GTZ2YyhjrzztDUpgDR82Lkoot25YNOQw==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.6.2.tgz#880096188216a5da0605f34082743651ede26e5a"
+  integrity sha512-EHjBtt128ixwPlSSqShEp6EBM62BZBaXcF+YYfpgZ8s+eOYGEL7Gy8QdvzXLKJSaw4ZWX38fTaaQRWWEOOm+eA==
   dependencies:
     classnames "^2.5.1"
     keydown-key "^1.4.2"
