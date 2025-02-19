@@ -4974,7 +4974,7 @@ jsonfile@^6.0.1:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
-keydown-key@^1.4.2:
+keydown-key@^1.4.2, keydown-key@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/keydown-key/-/keydown-key-1.4.4.tgz#356c161558c3440c5d28c65eb3f17fcf6a66e567"
   integrity sha512-KV3Eh12yX6TmEtPm0OH/A3atBfdj7RhQwp4qYFB7jdVpXEwqokPUtHiYIjWc472mfRBFJsQB7pbyDgsp4t2Twg==
@@ -6400,7 +6400,7 @@ raw-body@2.5.2:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-customize-token-input@^2.6.1:
+react-customize-token-input@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.6.3.tgz#580f02d6a8eb70d40d08267106e75a8bffab598e"
   integrity sha512-P2amnu9cQ3aFfL2wmplVq0ErgJPcMdjX5fMpHlrZNKHt7m/yU3gH5yxM7Tzpqf2vTEhkkXOUg2eDCWM6rVOkCQ==

@@ -1,0 +1,62 @@
+.customize-token {
+  display: inline-block;
+  padding: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border: 1px solid #555;
+
+  .token-body {
+    display: flex;
+
+    .display-label {
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .input {
+      height: 24px;
+    }
+  }
+
+  .button-icon {
+    margin-right: 4px;
+    cursor: pointer;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.edit-icon {
+      margin-left: 4px;
+    }
+  }
+
+  &.error,
+  &.pass {
+    .message {
+      display: flex;
+      padding-top: 4px;
+      margin-top: 4px;
+      border-top: 1px dashed gray;
+
+      .status-icon {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &.error {
+    .message {
+      color: red;
+    }
+  }
+
+  &.pass {
+    .message {
+      color: green;
+    }
+  }
+}

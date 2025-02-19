@@ -35,8 +35,9 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "formik": "^2.4.6",
+    "keydown-key": "^1.4.4",
     "react": "^19.0.0",
-    "react-customize-token-input": "^2.6.1",
+    "react-customize-token-input": "^2.6.3",
     "react-dev-utils": "^12.0.1",
     "react-dom": "^19.0.0"
   },
