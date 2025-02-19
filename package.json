@@ -18,19 +18,6 @@
     "lint:typescript": "tsc --noEmit true",
     "start": "cd examples; webpack && webpack serve"
   },
-  "lint-staged": {
-    "{src,examples}/**/*.{ts,tsx}": [
-      "tsc --noEmit true"
-    ],
-    "{src,examples}/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix --max-warnings 0"
-    ],
-    "{src,examples}/**/*.scss": [
-      "prettier --write",
-      "stylelint --fix --custom-syntax postcss-scss"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:seawind543/example-react-token-input-with-formik.git"
@@ -48,8 +35,9 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "formik": "^2.4.6",
+    "keydown-key": "^1.4.4",
     "react": "^19.0.0",
-    "react-customize-token-input": "^2.6.1",
+    "react-customize-token-input": "^2.6.3",
     "react-dev-utils": "^12.0.1",
     "react-dom": "^19.0.0"
   },

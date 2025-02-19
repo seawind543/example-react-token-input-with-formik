@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 import Section from './Section';
 
 import ExampleDefault from './ExampleDefault';
+import ExampleCustomizeToken from './ExampleCustomizeToken';
 
 import './index.scss';
 
@@ -14,7 +15,10 @@ const name = 'React TokenInput (react-customize-token-input)';
 const url =
   'https://github.com/seawind543/example-react-token-input-with-formik';
 
-const examples = [<ExampleDefault key="ExampleDefault" />];
+const examples = [
+  <ExampleDefault key="ExampleDefault" />,
+  <ExampleCustomizeToken key="ExampleCustomizeToken" />,
+];
 
 type ExampleTitle = {
   label: string;
