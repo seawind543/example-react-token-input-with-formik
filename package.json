@@ -15,21 +15,8 @@
     "lint": "yarn run lint:style && yarn run lint:eslint && yarn run lint:typescript",
     "lint:eslint": "eslint --max-warnings 0 --ext .jsx,.js,.tsx,.ts src examples",
     "lint:style": "stylelint --custom-syntax postcss-scss '**/*.scss' --fix",
-    "lint:typescript": "tsc --noEmit true",
+    "lint:typescript": "tsc --noEmit",
     "start": "cd examples; webpack && webpack serve"
-  },
-  "lint-staged": {
-    "{src,examples}/**/*.{ts,tsx}": [
-      "tsc --noEmit true"
-    ],
-    "{src,examples}/**/*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix --max-warnings 0"
-    ],
-    "{src,examples}/**/*.scss": [
-      "prettier --write",
-      "stylelint --fix --custom-syntax postcss-scss"
-    ]
   },
   "repository": {
     "type": "git",
