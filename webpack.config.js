@@ -101,7 +101,7 @@ module.exports = {
             loader: 'sass-loader', // compiles SASS to CSS
             options: {
               sassOptions: {
-                outputStyle: 'expanded',
+                style: 'expanded',
               },
               sourceMap: false,
             },
