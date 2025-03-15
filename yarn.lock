@@ -6434,7 +6434,7 @@ raw-body@2.5.2:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-customize-token-input@^2.6.1:
+react-customize-token-input@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/react-customize-token-input/-/react-customize-token-input-2.6.3.tgz#580f02d6a8eb70d40d08267106e75a8bffab598e"
   integrity sha512-P2amnu9cQ3aFfL2wmplVq0ErgJPcMdjX5fMpHlrZNKHt7m/yU3gH5yxM7Tzpqf2vTEhkkXOUg2eDCWM6rVOkCQ==
